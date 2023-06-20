@@ -1,25 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CheckCollisions : MonoBehaviour
 {
+    public int score;
+    public TextMeshProUGUI CoinText;
     private void OnTriggerEnter(Collider other)
     {
+
         if (other.CompareTag("Coin"))
         {
             //Debug.Log(other.gameObject.name);
-            Destroy(other.gameObject);
+            AddCoin();
+            //Destroy(other.gameObject);
+            other.gameObject.SetActive(false);
+
         }
     }
-    void Start()
-    {
-        
-    }
 
-    
-    void Update()
+    public void AddCoin()
     {
-        
+        score++;
+        CoinText.text = "Score: " + score.ToString();
     }
 }
