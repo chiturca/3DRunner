@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class CheckCollisions : MonoBehaviour
 {
@@ -29,6 +30,8 @@ public class CheckCollisions : MonoBehaviour
         if (collision.gameObject.CompareTag("Collision"))
         {
             Debug.Log("Found Obstacle!!");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            //get back to the beginning point
         }
     }
 
