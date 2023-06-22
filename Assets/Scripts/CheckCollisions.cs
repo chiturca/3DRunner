@@ -9,6 +9,12 @@ public class CheckCollisions : MonoBehaviour
     public int score;
     public TextMeshProUGUI CoinText;
     public PlayerController playerController;
+    Vector3 PlayerStartPos;
+
+    private void Start()
+    {
+        PlayerStartPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Coin"))
@@ -29,9 +35,9 @@ public class CheckCollisions : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Collision"))
         {
-            Debug.Log("Found Obstacle!!");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            //get back to the beginning point
+            //Debug.Log("Found Obstacle!!");
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            transform.position = PlayerStartPos;
         }
     }
 
