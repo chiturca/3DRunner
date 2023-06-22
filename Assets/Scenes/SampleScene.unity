@@ -309,8 +309,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4288413783
-  m_fontColor: {r: 0.3403725, g: 0, b: 0.6132076, a: 1}
+    rgba: 4282286904
+  m_fontColor: {r: 0.21960784, g: 0.5137255, b: 0.24313726, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -880,6 +880,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hope
       objectReference: {fileID: 0}
+    - target: {fileID: 1541519666899703477, guid: 2a27458a20ec7674badf50bf01d5c8d4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 47e83601b04b4584f8f6ec5f0b033c28, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a27458a20ec7674badf50bf01d5c8d4, type: 3}
 --- !u!4 &336031021 stripped
@@ -1376,8 +1380,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4288413783
-  m_fontColor: {r: 0.3403725, g: 0, b: 0.6132076, a: 1}
+    rgba: 4279867643
+  m_fontColor: {r: 0.9843137, g: 0.59607846, b: 0.09803922, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1791,6 +1795,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stickman@Running (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1541519666899703477, guid: 2a27458a20ec7674badf50bf01d5c8d4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 19cd9f43be4ea8b478ca3e3c7c584f53, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a27458a20ec7674badf50bf01d5c8d4, type: 3}
 --- !u!1001 &958667130
@@ -1864,6 +1872,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bobby
       objectReference: {fileID: 0}
+    - target: {fileID: 1541519666899703477, guid: 2a27458a20ec7674badf50bf01d5c8d4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4e86943dc864d9248991c0791246494f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a27458a20ec7674badf50bf01d5c8d4, type: 3}
 --- !u!4 &958667131 stripped
@@ -2243,6 +2255,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Noah
       objectReference: {fileID: 0}
+    - target: {fileID: 1541519666899703477, guid: 2a27458a20ec7674badf50bf01d5c8d4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 122920fb7a43e12448f91458e13d74b4, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a27458a20ec7674badf50bf01d5c8d4, type: 3}
 --- !u!4 &1070412410 stripped
@@ -2332,8 +2348,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4288413783
-  m_fontColor: {r: 0.3403725, g: 0, b: 0.6132076, a: 1}
+    rgba: 4279834905
+  m_fontColor: {r: 0.098039225, g: 0.098039225, b: 0.098039225, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2611,8 +2627,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4288413783
-  m_fontColor: {r: 0.3403725, g: 0, b: 0.6132076, a: 1}
+    rgba: 4279435244
+  m_fontColor: {r: 0.92479146, g: 1, b: 0.069811285, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2876,6 +2892,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Priya
       objectReference: {fileID: 0}
+    - target: {fileID: 1541519666899703477, guid: 2a27458a20ec7674badf50bf01d5c8d4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ee264484c0cd5145bfe249802e7e088, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a27458a20ec7674badf50bf01d5c8d4, type: 3}
 --- !u!4 &1268011250 stripped
@@ -3653,8 +3673,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4288413783
-  m_fontColor: {r: 0.3403725, g: 0, b: 0.6132076, a: 1}
+    rgba: 4287071621
+  m_fontColor: {r: 0.52156866, g: 0.52156866, b: 0.5294118, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3980,6 +4000,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lottie
       objectReference: {fileID: 0}
+    - target: {fileID: 1541519666899703477, guid: 2a27458a20ec7674badf50bf01d5c8d4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1092f01584ebed548a29695cd32845dc, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a27458a20ec7674badf50bf01d5c8d4, type: 3}
 --- !u!4 &1802124426 stripped
@@ -4089,6 +4113,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gary
       objectReference: {fileID: 0}
+    - target: {fileID: 1541519666899703477, guid: 2a27458a20ec7674badf50bf01d5c8d4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2023170ffeae22b44b192d73a60dd34b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a27458a20ec7674badf50bf01d5c8d4, type: 3}
 --- !u!4 &1883357982 stripped
