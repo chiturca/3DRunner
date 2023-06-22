@@ -10,16 +10,17 @@ public class CheckCollisions : MonoBehaviour
     public TextMeshProUGUI CoinText;
     public PlayerController playerController;
     Vector3 PlayerStartPos;
+    public GameObject speedBoosterIcon;
 
     private void Start()
     {
         PlayerStartPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        speedBoosterIcon.SetActive(false);
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Coin"))
         {
-            //Debug.Log(other.gameObject.name);
             AddCoin();
             //Destroy(other.gameObject);
             other.gameObject.SetActive(false);
@@ -29,13 +30,18 @@ public class CheckCollisions : MonoBehaviour
             Debug.Log("Congrats!");
             playerController.runningSpeed = 0;
         }
+        else if (other.CompareTag("SpeedBoost"))
+        {
+            playerController.runningSpeed += 3f;
+            speedBoosterIcon.SetActive(true);
+            StartCoroutine(SlowAfterAWhileCoroutine());
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Collision"))
         {
-            //Debug.Log("Found Obstacle!!");
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             transform.position = PlayerStartPos;
         }
@@ -45,5 +51,12 @@ public class CheckCollisions : MonoBehaviour
     {
         score++;
         CoinText.text = "Score: " + score.ToString();
+    }
+
+    private IEnumerator SlowAfterAWhileCoroutine()
+    {
+        yield return new WaitForSeconds(2.0f);
+        playerController.runningSpeed -= 3f;
+        speedBoosterIcon.SetActive(false);
     }
 }

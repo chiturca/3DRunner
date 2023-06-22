@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Coin
   - Collision
+  - SpeedBoost
   layers:
   - Default
   - TransparentFX
