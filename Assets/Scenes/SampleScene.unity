@@ -273,9 +273,10 @@ GameObject:
   - component: {fileID: 66343550}
   - component: {fileID: 66343556}
   - component: {fileID: 66343555}
+  - component: {fileID: 66343557}
   m_Layer: 0
   m_Name: Hope
-  m_TagString: Untagged
+  m_TagString: Runner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -503,6 +504,21 @@ MonoBehaviour:
   OpponentAgent: {fileID: 66343555}
   Target: {fileID: 695405261}
   speedBoosterIcon: {fileID: 264338405}
+--- !u!114 &66343557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 66343549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b8fbe2a4f25f8b4e91f545558220c55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 0
+  target: {fileID: 695405261}
+  rank: 0
 --- !u!1 &77625927 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b3df89a35c88d224a8ac4eab18e02541, type: 3}
@@ -600,7 +616,7 @@ GameObject:
   - component: {fileID: 94418492}
   - component: {fileID: 94418491}
   m_Layer: 5
-  m_Name: 3_Name
+  m_Name: 4_Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -910,6 +926,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b3df89a35c88d224a8ac4eab18e02541, type: 3}
   m_PrefabInstance: {fileID: 181664139}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &207014346
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 207014348}
+  - component: {fileID: 207014347}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &207014347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207014346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccc5d4fc4affd2a47b625526b6d73ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &207014348
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207014346}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 313.33746, y: 2461.2488, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &214956257
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1486,6 +1546,7 @@ GameObject:
   - component: {fileID: 412193214}
   - component: {fileID: 412193216}
   - component: {fileID: 412193215}
+  - component: {fileID: 412193217}
   m_Layer: 5
   m_Name: InGameRanking
   m_TagString: Untagged
@@ -1558,6 +1619,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 412193213}
   m_CullTransparentMesh: 1
+--- !u!114 &412193217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412193213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29693bf0ee1411348a70f27ed4cbbf82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  namesTxt:
+  - {fileID: 1500125476}
+  - {fileID: 971105020}
+  - {fileID: 724971946}
+  - {fileID: 94418491}
+  - {fileID: 96863437}
+  - {fileID: 979436795}
+  - {fileID: 493584404}
+  a: 
+  b: 
+  c: 
+  d: 
+  e: 
+  f: 
+  g: 
 --- !u!1 &456633877
 GameObject:
   m_ObjectHideFlags: 0
@@ -1571,9 +1659,10 @@ GameObject:
   - component: {fileID: 456633882}
   - component: {fileID: 456633880}
   - component: {fileID: 456633881}
+  - component: {fileID: 456633883}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Runner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1608,7 +1697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c4ffc9b42e521e4599d27d12953f67a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runningSpeed: 10
+  runningSpeed: 9
   xSpeed: 250
   limitX: 3.75
 --- !u!136 &456633880
@@ -1657,6 +1746,21 @@ MonoBehaviour:
   CoinText: {fileID: 59051062}
   playerController: {fileID: 456633879}
   speedBoosterIcon: {fileID: 1788616082}
+--- !u!114 &456633883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456633877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b8fbe2a4f25f8b4e91f545558220c55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 0
+  target: {fileID: 695405261}
+  rank: 0
 --- !u!1 &493584402
 GameObject:
   m_ObjectHideFlags: 0
@@ -2218,7 +2322,7 @@ GameObject:
   - component: {fileID: 724971947}
   - component: {fileID: 724971946}
   m_Layer: 5
-  m_Name: 3_Name
+  m_Name: 5_Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2301,9 +2405,10 @@ GameObject:
   - component: {fileID: 728404190}
   - component: {fileID: 728404196}
   - component: {fileID: 728404195}
+  - component: {fileID: 728404197}
   m_Layer: 0
   m_Name: Priya
-  m_TagString: Untagged
+  m_TagString: Runner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2531,6 +2636,21 @@ MonoBehaviour:
   OpponentAgent: {fileID: 728404195}
   Target: {fileID: 695405261}
   speedBoosterIcon: {fileID: 77625927}
+--- !u!114 &728404197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728404189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b8fbe2a4f25f8b4e91f545558220c55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 0
+  target: {fileID: 695405261}
+  rank: 0
 --- !u!1 &818634733
 GameObject:
   m_ObjectHideFlags: 0
@@ -3137,7 +3257,7 @@ GameObject:
   - component: {fileID: 971105021}
   - component: {fileID: 971105020}
   m_Layer: 5
-  m_Name: 3_Name
+  m_Name: 6_Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3587,9 +3707,10 @@ GameObject:
   - component: {fileID: 1116753562}
   - component: {fileID: 1116753568}
   - component: {fileID: 1116753567}
+  - component: {fileID: 1116753569}
   m_Layer: 0
   m_Name: Lottie
-  m_TagString: Untagged
+  m_TagString: Runner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3817,6 +3938,21 @@ MonoBehaviour:
   OpponentAgent: {fileID: 1116753567}
   Target: {fileID: 695405261}
   speedBoosterIcon: {fileID: 1023184017}
+--- !u!114 &1116753569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116753561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b8fbe2a4f25f8b4e91f545558220c55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 0
+  target: {fileID: 695405261}
+  rank: 0
 --- !u!1 &1159119304
 GameObject:
   m_ObjectHideFlags: 0
@@ -3898,9 +4034,10 @@ GameObject:
   - component: {fileID: 1176534048}
   - component: {fileID: 1176534054}
   - component: {fileID: 1176534053}
+  - component: {fileID: 1176534055}
   m_Layer: 0
   m_Name: Gary
-  m_TagString: Untagged
+  m_TagString: Runner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4128,6 +4265,21 @@ MonoBehaviour:
   OpponentAgent: {fileID: 1176534053}
   Target: {fileID: 695405261}
   speedBoosterIcon: {fileID: 1813728964}
+--- !u!114 &1176534055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176534047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b8fbe2a4f25f8b4e91f545558220c55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 0
+  target: {fileID: 695405261}
+  rank: 0
 --- !u!1 &1191031136
 GameObject:
   m_ObjectHideFlags: 0
@@ -4553,7 +4705,7 @@ GameObject:
   - component: {fileID: 1500125477}
   - component: {fileID: 1500125476}
   m_Layer: 5
-  m_Name: 3_Name
+  m_Name: 7_Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4802,9 +4954,10 @@ GameObject:
   - component: {fileID: 1593338428}
   - component: {fileID: 1593338434}
   - component: {fileID: 1593338433}
+  - component: {fileID: 1593338435}
   m_Layer: 0
   m_Name: Bobby
-  m_TagString: Untagged
+  m_TagString: Runner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5032,6 +5185,21 @@ MonoBehaviour:
   OpponentAgent: {fileID: 1593338433}
   Target: {fileID: 695405261}
   speedBoosterIcon: {fileID: 1293084860}
+--- !u!114 &1593338435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593338427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b8fbe2a4f25f8b4e91f545558220c55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 0
+  target: {fileID: 695405261}
+  rank: 0
 --- !u!1 &1631456269
 GameObject:
   m_ObjectHideFlags: 0
@@ -5267,9 +5435,10 @@ GameObject:
   - component: {fileID: 1705820782}
   - component: {fileID: 1705820788}
   - component: {fileID: 1705820787}
+  - component: {fileID: 1705820789}
   m_Layer: 0
   m_Name: Noah
-  m_TagString: Untagged
+  m_TagString: Runner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5497,6 +5666,21 @@ MonoBehaviour:
   OpponentAgent: {fileID: 1705820787}
   Target: {fileID: 695405261}
   speedBoosterIcon: {fileID: 975528489}
+--- !u!114 &1705820789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705820781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b8fbe2a4f25f8b4e91f545558220c55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 0
+  target: {fileID: 695405261}
+  rank: 0
 --- !u!1001 &1781807084
 PrefabInstance:
   m_ObjectHideFlags: 0
