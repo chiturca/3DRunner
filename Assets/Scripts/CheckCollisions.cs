@@ -12,6 +12,8 @@ public class CheckCollisions : MonoBehaviour
     Vector3 PlayerStartPos;
     public GameObject speedBoosterIcon;
 
+    //public GameManager gameManager;
+
     private void Start()
     {
         PlayerStartPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
@@ -29,6 +31,7 @@ public class CheckCollisions : MonoBehaviour
         {
             Debug.Log("Congrats!");
             playerController.runningSpeed = 0;
+            GameManager.instance.isGameOver = true;
         }
         else if (other.CompareTag("SpeedBoost"))
         {
