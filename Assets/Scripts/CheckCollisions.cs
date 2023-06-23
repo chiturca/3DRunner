@@ -13,11 +13,13 @@ public class CheckCollisions : MonoBehaviour
     public GameObject speedBoosterIcon;
 
     //public GameManager gameManager;
+    private InGameRanking ig;
 
     private void Start()
     {
         PlayerStartPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         speedBoosterIcon.SetActive(false);
+        ig = FindObjectOfType<InGameRanking>();
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -29,9 +31,18 @@ public class CheckCollisions : MonoBehaviour
         }
         else if (other.CompareTag("Finish"))
         {
-            Debug.Log("Congrats!");
-            playerController.runningSpeed = 0;
-            GameManager.instance.isGameOver = true;
+            if (ig.namesTxt[6].text == "Player")
+            {
+                PlayerFinished();
+                Debug.Log("You Win!");
+            }
+            else
+            {
+                PlayerFinished();
+                Debug.Log("Loser!");
+            }
+            
+            
         }
         else if (other.CompareTag("SpeedBoost"))
         {
@@ -39,6 +50,12 @@ public class CheckCollisions : MonoBehaviour
             speedBoosterIcon.SetActive(true);
             StartCoroutine(SlowAfterAWhileCoroutine());
         }
+    }
+
+    void PlayerFinished()
+    {
+        playerController.runningSpeed = 0;
+        GameManager.instance.isGameOver = true;
     }
 
     private void OnCollisionEnter(Collision collision)
