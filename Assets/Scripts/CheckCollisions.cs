@@ -11,6 +11,9 @@ public class CheckCollisions : MonoBehaviour
     public PlayerController playerController;
     Vector3 PlayerStartPos;
     public GameObject speedBoosterIcon;
+    public int maxScore;
+    public Animator PlayerAnim;
+    public GameObject Player;
 
     //public GameManager gameManager;
     private InGameRanking ig;
@@ -20,6 +23,7 @@ public class CheckCollisions : MonoBehaviour
         PlayerStartPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         speedBoosterIcon.SetActive(false);
         ig = FindObjectOfType<InGameRanking>();
+        PlayerAnim = Player.GetComponentInChildren<Animator>();
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -31,15 +35,17 @@ public class CheckCollisions : MonoBehaviour
         }
         else if (other.CompareTag("Finish"))
         {
-            if (ig.namesTxt[6].text == "Player")
+            if (ig.namesTxt[6].text == "Player" && score >= maxScore)
             {
                 PlayerFinished();
-                Debug.Log("You Win!");
+                //Debug.Log("You Win!");
+                PlayerAnim.SetBool("Win", true);
             }
             else
             {
                 PlayerFinished();
-                Debug.Log("Loser!");
+                //Debug.Log("Loser!");
+                PlayerAnim.SetBool("Lose", true);
             }
             
             
@@ -55,6 +61,7 @@ public class CheckCollisions : MonoBehaviour
     void PlayerFinished()
     {
         playerController.runningSpeed = 0;
+        transform.Rotate(transform.rotation.x, 180, transform.rotation.z, Space.Self);
         GameManager.instance.isGameOver = true;
     }
 
