@@ -1860,9 +1860,9 @@ GameObject:
   - component: {fileID: 456633878}
   - component: {fileID: 456633879}
   - component: {fileID: 456633882}
+  - component: {fileID: 456633883}
   - component: {fileID: 456633880}
   - component: {fileID: 456633881}
-  - component: {fileID: 456633883}
   m_Layer: 0
   m_Name: Player
   m_TagString: Runner
@@ -1900,7 +1900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c4ffc9b42e521e4599d27d12953f67a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runningSpeed: 9
+  runningSpeed: 15
   xSpeed: 250
   limitX: 3.75
 --- !u!136 &456633880
@@ -1952,6 +1952,7 @@ MonoBehaviour:
   maxScore: 10
   PlayerAnim: {fileID: 0}
   Player: {fileID: 456633877}
+  FinishPanel: {fileID: 1810360791}
 --- !u!114 &456633883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2540,10 +2541,10 @@ RectTransform:
   m_Father: {fileID: 1810360792}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.52078134}
-  m_AnchorMax: {x: 1, y: 0.6452969}
-  m_AnchoredPosition: {x: 0.39746094, y: -2.4639893}
-  m_SizeDelta: {x: -0.4000244, y: -0.9299927}
+  m_AnchorMin: {x: 0, y: 0.39800003}
+  m_AnchorMax: {x: 1, y: 0.52400005}
+  m_AnchoredPosition: {x: -0.2000122, y: -3.7099915}
+  m_SizeDelta: {x: -0.4000244, y: -3.9299927}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &593842953
 MonoBehaviour:
@@ -3310,10 +3311,10 @@ RectTransform:
   m_Father: {fileID: 1810360792}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.38069448, y: 0.36600003}
-  m_AnchorMax: {x: 0.61730564, y: 0.5}
-  m_AnchoredPosition: {x: 1.5, y: -1}
-  m_SizeDelta: {x: 192, y: 193}
+  m_AnchorMin: {x: 0.38069448, y: 0.22434378}
+  m_AnchorMax: {x: 0.61319447, y: 0.36600003}
+  m_AnchoredPosition: {x: 4.8372955, y: -7.5}
+  m_SizeDelta: {x: 198, y: 176}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &875686133
 MonoBehaviour:
@@ -3358,7 +3359,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 875686134}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 456633882}
+        m_TargetAssemblyTypeName: CheckCollisions, Assembly-CSharp
+        m_MethodName: RestartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &875686134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6466,7 +6479,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1810360792
 RectTransform:
   m_ObjectHideFlags: 0

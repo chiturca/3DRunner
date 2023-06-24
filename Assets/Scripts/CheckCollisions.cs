@@ -14,6 +14,7 @@ public class CheckCollisions : MonoBehaviour
     public int maxScore;
     public Animator PlayerAnim;
     public GameObject Player;
+    public GameObject FinishPanel;
 
     //public GameManager gameManager;
     private InGameRanking ig;
@@ -63,6 +64,12 @@ public class CheckCollisions : MonoBehaviour
         playerController.runningSpeed = 0;
         transform.Rotate(transform.rotation.x, 180, transform.rotation.z, Space.Self);
         GameManager.instance.isGameOver = true;
+        FinishPanel.SetActive(true);
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     private void OnCollisionEnter(Collision collision)
