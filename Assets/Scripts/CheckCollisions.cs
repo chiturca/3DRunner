@@ -11,12 +11,12 @@ public class CheckCollisions : MonoBehaviour
     public PlayerController playerController;
     Vector3 PlayerStartPos;
     public GameObject speedBoosterIcon;
+    public GameObject slownessIcon;
     public int maxScore;
     public Animator PlayerAnim;
     public GameObject Player;
     public GameObject FinishPanel;
 
-    //public GameManager gameManager;
     private InGameRanking ig;
 
     private void Start()
@@ -39,23 +39,25 @@ public class CheckCollisions : MonoBehaviour
             if (ig.namesTxt[6].text == "Player" && score >= maxScore)
             {
                 PlayerFinished();
-                //Debug.Log("You Win!");
                 PlayerAnim.SetBool("Win", true);
             }
             else
             {
                 PlayerFinished();
-                //Debug.Log("Loser!");
                 PlayerAnim.SetBool("Lose", true);
             }
-            
-            
         }
         else if (other.CompareTag("SpeedBoost"))
         {
             playerController.runningSpeed += 3f;
             speedBoosterIcon.SetActive(true);
             StartCoroutine(SlowAfterAWhileCoroutine());
+        }
+        else if (other.CompareTag("SlownessObs"))
+        {
+            playerController.runningSpeed -= 3f;
+            slownessIcon.SetActive(true);
+            StartCoroutine(FastAfterAWhileCoroutine());
         }
     }
 
@@ -92,5 +94,12 @@ public class CheckCollisions : MonoBehaviour
         yield return new WaitForSeconds(2.0f);
         playerController.runningSpeed -= 3f;
         speedBoosterIcon.SetActive(false);
+    }
+
+    private IEnumerator FastAfterAWhileCoroutine()
+    {
+        yield return new WaitForSeconds(3.0f);
+        playerController.runningSpeed += 3f;
+        slownessIcon.SetActive(false);
     }
 }

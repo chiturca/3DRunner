@@ -13,10 +13,6 @@ public class RankingSystem : MonoBehaviour
     {
         distance = Vector3.Distance(transform.position, target.transform.position);
     }
-    void Start()
-    {
-        
-    }
 
 
     void Update()

@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     private InGameRanking ig;
 
     private GameObject[] runners;
-    List<RankingSystem> sortArray = new List<RankingSystem>();
+    List<RankingSystem> sortArray = new();
 
     public bool isGameOver = false;
 

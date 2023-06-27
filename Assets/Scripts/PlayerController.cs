@@ -9,24 +9,16 @@ public class PlayerController : MonoBehaviour
     float newX = 0;
     public float xSpeed;
     public float limitX;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    
     void Update()
     {
         SwipeCheck();
-
     }
 
     private void SwipeCheck()
     {
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
         {
-            //Debug.Log(Input.Gettouch(0).deltaPosition.x);
             touchXDelta = Input.GetTouch(0).deltaPosition.x / Screen.width;
         }
         else if (Input.GetMouseButton(0))

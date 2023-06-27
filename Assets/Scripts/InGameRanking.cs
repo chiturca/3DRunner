@@ -8,12 +8,6 @@ public class InGameRanking : MonoBehaviour
     public Text[] namesTxt;
     public string a, b, c, d, e, f, g;
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         namesTxt[0].text = a;
