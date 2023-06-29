@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     public bool isGameOver = false;
 
-    //public static bool gameStarted;
+    public static bool gameStarted;
     private void Awake()
     {
         instance = this;
@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-        //gameStarted = false;
+        gameStarted = false;
         for (int i = 0; i < runners.Length; i++)
         {
             sortArray.Add(runners[i].GetComponent<RankingSystem>());
