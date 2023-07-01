@@ -13,7 +13,8 @@ public class GameManager : MonoBehaviour
 
     public bool isGameOver = false;
 
-    public static bool gameStarted;
+    private bool isGameStarted = false;
+
     private void Awake()
     {
         instance = this;
@@ -22,12 +23,13 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-        gameStarted = false;
         for (int i = 0; i < runners.Length; i++)
         {
+
             sortArray.Add(runners[i].GetComponent<RankingSystem>());
         }
     }
+
 
     void CalculateRank()
     {
@@ -49,8 +51,29 @@ public class GameManager : MonoBehaviour
         ig.g = sortArray[0].name;
     }
 
+    [System.Obsolete]
     void Update()
     {
         CalculateRank();
+
+        if (!isGameStarted && (Input.GetMouseButtonDown(0) || Input.touchCount > 0))
+        {
+            StartGame();
+        }
+    }
+
+    [System.Obsolete]
+    void StartGame()
+    {
+        isGameStarted = true;
+
+        foreach (GameObject runner in runners)
+        {
+            Opponent opponent = runner.GetComponent<Opponent>();
+            if (opponent != null)
+            {
+                opponent.StartRunning(); // Start the AI runners
+            }
+        }
     }
 }
