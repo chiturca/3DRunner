@@ -63,16 +63,27 @@ public class GameManager : MonoBehaviour
     }
 
     [System.Obsolete]
-    void StartGame()
+    public void StartGame()
     {
-        isGameStarted = true;
-
-        foreach (GameObject runner in runners)
+        if (!isGameStarted)
         {
-            Opponent opponent = runner.GetComponent<Opponent>();
-            if (opponent != null)
+            isGameStarted = true;
+
+            foreach (GameObject runner in runners)
             {
-                opponent.StartRunning(); // Start the AI runners
+                PlayerController playerController = runner.GetComponent<PlayerController>();
+                if (playerController != null)
+                {
+                    playerController.StartRunning();
+                }
+                else
+                {
+                    Opponent opponent = runner.GetComponent<Opponent>();
+                    if (opponent != null)
+                    {
+                        opponent.StartRunning();
+                    }
+                }
             }
         }
     }

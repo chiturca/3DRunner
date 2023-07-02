@@ -2043,7 +2043,7 @@ MonoBehaviour:
   speedBoosterIcon: {fileID: 1788616082}
   slownessIcon: {fileID: 919132149452789378}
   maxScore: 10
-  PlayerAnim: {fileID: 0}
+  PlayerAnim: {fileID: 1654274885}
   Player: {fileID: 456633877}
   FinishPanel: {fileID: 1810360791}
 --- !u!114 &456633883
@@ -4166,6 +4166,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2a27458a20ec7674badf50bf01d5c8d4, type: 3}
       propertyPath: m_Name
       value: stickman@Running (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2a27458a20ec7674badf50bf01d5c8d4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1541519666899703477, guid: 2a27458a20ec7674badf50bf01d5c8d4, type: 3}
       propertyPath: m_Materials.Array.data[0]

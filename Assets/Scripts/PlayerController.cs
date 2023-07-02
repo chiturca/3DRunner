@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
-        SetRunning(false); 
+        SetRunning(false);
     }
     void Update()
     {
@@ -28,11 +28,11 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
             {
-                StartRunning();
+                GameManager.instance.StartGame();
             }
             else if (Input.GetMouseButtonDown(0))
             {
-                StartRunning();
+                GameManager.instance.StartGame();
             }
         }
 
@@ -53,17 +53,16 @@ public class PlayerController : MonoBehaviour
             newX = transform.position.x + xSpeed * touchXDelta * Time.deltaTime;
             newX = Mathf.Clamp(newX, -limitX, limitX);
 
-            Vector3 newPosition = new Vector3(newX, transform.position.y, transform.position.z + runningSpeed * Time.deltaTime);
+            Vector3 newPosition = new(newX, transform.position.y, transform.position.z + runningSpeed * Time.deltaTime);
             transform.position = newPosition;
-        }
-
-        void StartRunning()
-        {
-            isRunning = true;
-            SetRunning(true);
         }
     }
 
+    public void StartRunning()
+    {
+        isRunning = true;
+        SetRunning(true);
+    }
     void SetRunning(bool running)
     {
         if (animator != null)
