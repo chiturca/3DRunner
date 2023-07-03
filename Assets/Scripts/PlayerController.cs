@@ -17,11 +17,14 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         SetRunning(false);
     }
+
+    [System.Obsolete]
     void Update()
     {
         SwipeCheck();
     }
 
+    [System.Obsolete]
     private void SwipeCheck()
     {
         if (!isRunning)
